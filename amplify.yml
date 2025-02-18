@@ -3,6 +3,7 @@ frontend:
   phases:
     preBuild:
       commands:
+        - curl -sSL https://github.com/gohugoio/hugo/releases/download/v0.125.7/hugo_0.125.7_Linux-64bit.tar.gz | tar xz -C /tmp && mv /tmp/hugo /usr/local/bin/hugo  # Install Hugo v0.125.7
         - hugo version  # Verify Hugo version
     build:
       commands:
