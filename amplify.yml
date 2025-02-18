@@ -1,0 +1,16 @@
+version: 1
+frontend:
+  phases:
+    preBuild:
+      commands:
+        - hugo version  # Verify Hugo version
+    build:
+      commands:
+        - hugo --gc --minify  # Build the Hugo site with garbage collection and minification
+  artifacts:
+    baseDirectory: public  # The directory where Hugo builds the site
+    files:
+      - '**/*'  # All files in the public directory
+  cache:
+    paths:
+      - 'themes/**/*'  # Cache the theme directory to speed up builds
