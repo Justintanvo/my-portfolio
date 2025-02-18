@@ -1,4 +1,67 @@
-baseURL = "http://localhost:1313/"
-languageCode = "en-us"
-title = "My Data Science Portfolio"
-theme = "academic"  # Ensure this matches your theme folder name
+baseURL = "https://justintanvo.com/"
+title = "Justin T. Vo"
+theme = "PaperMod"
+
+[params]
+  author = "Justin T. Vo"
+  description = "Data Analyst | Software Developer | AWS Certified | Salesforce Admin"
+  defaultTheme = "auto"
+  ShowReadingTime = false
+  ShowShareButtons = false
+  ShowPostNavLinks = false
+  ShowBreadCrumbs = false
+  ShowCodeCopyButtons = true
+  ShowWordCount = false
+  ShowRssButtonInSectionTermList = false
+
+  [params.homeInfoParams]
+    Title = "Justin T. Vo"
+    Content = """Data Analyst | Software Developer | AWS Certified | Salesforce Admin  
+    - 📍 Based in San Francisco, CA  
+    - 🎓 Vassar College (Mathematics & Economics)  
+    - 🌎 Japanese (N2) | Korean (TOPIK 1)  
+    - 🛠 SQL | Python | AWS | Google Cloud | BigQuery  
+    - 📊 Experienced in Data Analysis, Machine Learning, and Web Development  
+    """
+
+[menu]
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "/about/"
+    weight = 1
+
+  [[menu.main]]
+    identifier = "projects"
+    name = "Projects"
+    url = "/projects/"
+    weight = 2
+
+  [[menu.main]]
+    identifier = "resume"
+    name = "Resume"
+    url = "/resume/"
+    weight = 3
+
+  [[menu.main]]
+    identifier = "contact"
+    name = "Contact"
+    url = "/contact/"
+    weight = 4
+
+# FIXED: Removed conflicting [params.socialIcons] table and kept only array table notation
+[[params.socialIcons]]
+  name = "email"
+  url = "mailto:justintanvo@gmail.com"
+
+[[params.socialIcons]]
+  name = "linkedin"
+  url = "https://www.linkedin.com/in/justintanvo"
+
+[[params.socialIcons]]
+  name = "github"
+  url = "https://github.com/Justintanvo"
+
+[markup]
+  [markup.highlight]
+    noClasses = false
