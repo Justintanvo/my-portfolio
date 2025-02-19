@@ -15,3 +15,10 @@ frontend:
     build:
       commands:
         - hugo --gc --minify  # Build the site
+  artifacts:
+    baseDirectory: public  # The directory where Hugo generates the output
+    files:
+      - '**/*'  # Include all files from the output
+  cache:
+    paths:
+      - node_modules/**/*  # Cache node_modules if you're using any front-end dependencies
