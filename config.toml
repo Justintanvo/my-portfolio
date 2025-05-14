@@ -16,6 +16,7 @@ theme = "PaperMod"
 
   # Homepage content
   [params.homeInfoParams]
+    Image = "/images/justin_portrait.jpg" # Path to your image file
     Title = "Justin T. Vo"
     Content = """Data Analyst | Certified AWS Software Developer | Certified Salesforce Admin  
     - 📍 Based in San Francisco, CA  
@@ -24,7 +25,7 @@ theme = "PaperMod"
     - 🛠 SQL | Python | AWS | Google Cloud | BigQuery  
     - 📊 Experienced in Data Analysis, Machine Learning, and Web Development  
     """
-    Image = "/images/justin_portrait.jpg" # Path to your image file
+    
 
 [menu]
   [[menu.main]]
