@@ -1,7 +1,10 @@
----
-title: "Welcome to My Portfolio"
-date: 2025-02-18T00:00:00Z
-draft: false
----
++++
+title = 'My First Post'
+date = 2024-01-14T07:07:07+01:00
+draft = true
++++
+## Introduction
 
-This is my data science portfolio website.
+This is **bold** text, and this is *emphasized* text.
+
+Visit the [Hugo](https://gohugo.io) website!
