@@ -14,17 +14,34 @@ theme = "PaperMod"
   ShowWordCount = false
   ShowRssButtonInSectionTermList = false
 
-  # Homepage content
-  [params.homeInfoParams]
-    Image = "/images/justin_portrait.jpg" # Path to your image file
-    Title = "Justin T. Vo"
-    Content = """Data Analyst | Certified AWS Software Developer | Certified Salesforce Admin  
-    - 📍 Based in San Francisco, CA  
-    - 🎓 Vassar College (Mathematics & Economics)  
-    - 🌎 Japanese (N2) | Korean (TOPIK 1)  
-    - 🛠 SQL | Python | AWS | Google Cloud | BigQuery  
-    - 📊 Experienced in Data Analysis, Machine Learning, and Web Development  
-    """
+
+
+ [params.profileMode]
+  enabled = true
+  title = "Justin T. Vo"
+  subtitle = """
+  Thank you for visiting my website! I'm an open-source contributor to SF Tech as a data analyst. I graduated from Vassar College with an economics and math double major and am currently pursuing a master's in Computer Science with a focus on AI at WGU.
+  """
+  imageUrl = "/images/justin_portrait.png"
+  imageWidth = 200
+  imageHeight = 200
+  imageTitle = "Justin T. Vo"
+
+  # Social Icons
+[[params.socialIcons]]
+  name = "email"
+  url = "mailto:justintanvo@gmail.com"
+
+[[params.socialIcons]]
+  name = "linkedin"
+  url = "https://www.linkedin.com/in/justintanvo"
+
+[[params.socialIcons]]
+  name = "github"
+  url = "https://github.com/Justintanvo"
+
+
+
     
 
 [menu]
@@ -52,19 +69,11 @@ theme = "PaperMod"
     url = "/contact/"
     weight = 4
 
-# Social Icons
-[[params.socialIcons]]
-  name = "email"
-  url = "mailto:justintanvo@gmail.com"
-
-[[params.socialIcons]]
-  name = "linkedin"
-  url = "https://www.linkedin.com/in/justintanvo"
-
-[[params.socialIcons]]
-  name = "github"
-  url = "https://github.com/Justintanvo"
-
 [markup]
   [markup.highlight]
     noClasses = false
+
+
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
