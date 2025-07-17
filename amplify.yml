@@ -3,22 +3,22 @@ backend:
   phases:
     build:
       commands:
-        # Install Hugo based on the version in your repository
-        - curl -sSL https://github.com/gohugoio/hugo/releases/download/v0.144.0/hugo_0.144.0_Linux-64bit.tar.gz | tar xz -C /tmp
-        - mv /tmp/hugo /tmp/hugo-bin  # Move Hugo to a directory you can write to
-        - /tmp/hugo-bin version  # Ensure it's the correct version
+        # Install Hugo Extended
+        - curl -sSL https://github.com/gohugoio/hugo/releases/download/v0.144.0/hugo_extended_0.144.0_Linux-64bit.tar.gz | tar xz -C /tmp
+        - mv /tmp/hugo /tmp/hugo-bin
+        - /tmp/hugo-bin version
 frontend:
   phases:
     preBuild:
       commands:
-        - /tmp/hugo-bin version  # This will confirm the version being used
+        - /tmp/hugo-bin version
     build:
       commands:
-        - /tmp/hugo-bin --gc --minify  # Build the site
+        - /tmp/hugo-bin --gc --minify
   artifacts:
-    baseDirectory: public  # The directory where Hugo generates the output
+    baseDirectory: public
     files:
-      - '**/*'  # Include all files from the output
+      - '**/*'
   cache:
     paths:
-      - node_modules/**/*  # Cache node_modules if you're using any front-end dependencies
+      - node_modules/**/*
