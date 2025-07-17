@@ -28,17 +28,17 @@ theme = "PaperMod"
   imageTitle = "Justin T. Vo"
 
   # Social Icons
-[[params.socialIcons]]
-  name = "email"
-  url = "mailto:justintanvo@gmail.com"
+#[[params.socialIcons]]
+#  name = "email"
+#  url = "mailto:justintanvo@gmail.com"
 
-[[params.socialIcons]]
-  name = "linkedin"
-  url = "https://www.linkedin.com/in/justintanvo"
+#[[params.socialIcons]]
+#  name = "linkedin"
+# url = "https://www.linkedin.com/in/justintanvo"
 
-[[params.socialIcons]]
-  name = "github"
-  url = "https://github.com/Justintanvo"
+#[[params.socialIcons]]
+#  name = "github"
+#  url = "https://github.com/Justintanvo"
 
 
 
