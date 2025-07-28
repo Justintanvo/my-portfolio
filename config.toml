@@ -1,5 +1,6 @@
 baseURL = "https://justintanvo.com/"
 title = "Justin T. Vo"
+
 theme = "PaperMod"
 
 [params]
@@ -14,35 +15,29 @@ theme = "PaperMod"
   ShowWordCount = false
   ShowRssButtonInSectionTermList = false
 
-
-
- [params.profileMode]
-  enabled = true
-  title = "Justin T. Vo"
-  subtitle = """
-  Thank you for visiting my website! I'm an open-source contributor to SF Tech as a data analyst. I graduated from Vassar College with an economics and math double major and am currently pursuing a master's in Computer Science with a focus on AI at WGU.
-  """
-  imageUrl = "/images/justin_portrait.png"
-  imageWidth = 200
-  imageHeight = 200
-  imageTitle = "Justin T. Vo"
+  [params.profileMode]
+    enabled = true
+    title = "Justin T. Vo"
+    subtitle = """
+   Thank you for visiting my website! I'm an open-source contributor to SF Tech as a data analyst. I graduated from Vassar College with an economics and math double major and am currently pursuing a master's in Computer Science with a focus on AI at WGU.
+    """
+    imageUrl = "/images/justin_portrait.png"
+    imageWidth = 200
+    imageHeight = 200
+    imageTitle = "Justin T. Vo"
 
   # Social Icons
-#[[params.socialIcons]]
-#  name = "email"
-#  url = "mailto:justintanvo@gmail.com"
+  [[params.socialIcons]]
+    name = "email"
+    url = "mailto:justintanvo@gmail.com"
 
-#[[params.socialIcons]]
-#  name = "linkedin"
-# url = "https://www.linkedin.com/in/justintanvo"
+  [[params.socialIcons]]
+    name = "linkedin"
+    url = "https://www.linkedin.com/in/justintanvo"
 
-#[[params.socialIcons]]
-#  name = "github"
-#  url = "https://github.com/Justintanvo"
-
-
-
-    
+  [[params.socialIcons]]
+    name = "github"
+    url = "https://github.com/Justintanvo"
 
 [menu]
   [[menu.main]]
@@ -50,19 +45,16 @@ theme = "PaperMod"
     name = "About"
     url = "/about/"
     weight = 1
-
   [[menu.main]]
     identifier = "projects"
     name = "Projects"
     url = "/projects/"
     weight = 2
-
   [[menu.main]]
     identifier = "resume"
     name = "Resume"
     url = "/resume/"
     weight = 3
-
   [[menu.main]]
     identifier = "contact"
     name = "Contact"
@@ -72,8 +64,12 @@ theme = "PaperMod"
 [markup]
   [markup.highlight]
     noClasses = false
+  [markup.goldmark.renderer]
+    unsafe = true
 
-
-  [markup.goldmark]
-    [markup.goldmark.renderer]
-      unsafe = true
+[outputs]
+  home = ["HTML", "RSS"]
+  page = ["HTML"]
+  section = ["HTML", "RSS"]
+  taxonomy = ["HTML", "RSS"]
+  term = ["HTML", "RSS"]
