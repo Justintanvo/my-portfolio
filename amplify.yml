@@ -15,6 +15,7 @@ frontend:
     build:
       commands:
         - /tmp/hugo-bin --gc --minify
+        - hugo # <-- This is the missing command
   artifacts:
     baseDirectory: public
     files:
