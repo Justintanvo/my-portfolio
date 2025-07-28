@@ -1,25 +1,22 @@
 version: 1
-backend:
-  phases:
-    build:
-      commands:
- # Install the latest Hugo Extended version
-        - curl -sSL https://github.com/gohugoio/hugo/releases/download/v0.148.1/hugo_extended_0.148.1_Linux-64bit.tar.gz | tar xz -C /tmp
-        - mv /tmp/hugo /tmp/hugo-bin
-        - /tmp/hugo-bin version
 frontend:
   phases:
+    # The preBuild phase installs the correct version of Hugo
     preBuild:
       commands:
-        - /tmp/hugo-bin version
+        - curl -sSL https://github.com/gohugoio/hugo/releases/download/v0.148.1/hugo_extended_0.148.1_Linux-64bit.tar.gz | tar xz -C /tmp
+        - mv /tmp/hugo /usr/local/bin/
+        - hugo version
+    # The build phase uses the installed hugo command
     build:
       commands:
-        - /tmp/hugo-bin --gc --minify
-        - hugo # <-- This is the missing command
+        - hugo --gc --minify
   artifacts:
+    # This points to the default folder where Hugo builds the site
     baseDirectory: public
     files:
       - '**/*'
   cache:
+    # This caches Hugo-specific files to speed up future builds
     paths:
-      - node_modules/**/*
+      - /root/.cache/hugo_cache/
